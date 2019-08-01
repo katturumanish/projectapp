@@ -12,7 +12,7 @@ app.get('/todo', function(req, res){
 app.post('/todo', urlencodedParser, function(req, res){
   console.log(JSON.stringify(req.body.item))
   var spawn = require("child_process").spawn;
-  var process = spawn('python',['/Users/Student/Desktop/testproject.py',
+  var process = spawn('python',['testproject.py',
                             req.body.item] );
   //data.push(req.body);
   process.stdout.on('data', function(data){
